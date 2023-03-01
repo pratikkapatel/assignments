@@ -10,7 +10,7 @@ d.implicitly_wait(10)
 d.get("https://www.online.citibank.co.in/")
 
 # //a[@class='fancybox-item fancybox-close']
-d.find_element(By.CLASS_NAME,"fancybox-close").click()
+#d.find_element(By.CLASS_NAME,"fancybox-close").click()
 d.find_element(By.XPATH,"//span[normalize-space()='Login']").click()
 
 d.switch_to.window(d.window_handles[1])
@@ -19,6 +19,12 @@ d.find_element(By.XPATH,"//div[contains(text(),'Forgot User')]").click()
 
 d.find_element(By.LINK_TEXT,"select your product type").click()
 d.find_element(By.LINK_TEXT,"Credit Card").click()
+
+# a="citiCard"
+# for i in range(1,4):
+#     print("#citiCard"+str(i))
+#     d.find_element(By.CSS_SELECTOR, "#citiCard"+str(i)).send_keys("7897")
+
 
 d.find_element(By.CSS_SELECTOR,"#citiCard1").send_keys("7897")
 d.find_element(By.CSS_SELECTOR,"input[name='citiCard2']").send_keys("7897")
